@@ -1,0 +1,450 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.App {
+  text-align: left;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: radial-gradient(ellipse at top, #1a0b3d 0%, #000000 50%);
+  color: #ffffff;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* VibeCoder Brand Gradient - Exact colors from logo */
+.vibecoder-brand-gradient {
+  background: linear-gradient(
+    90deg,
+    #6366F1 0%,     /* Purple start */
+    #8B5CF6 25%,    /* Violet */
+    #EC4899 50%,    /* Pink/Magenta */
+    #3B82F6 75%,    /* Blue */
+    #06B6D4 100%    /* Cyan/Teal */
+  );
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: vibecoder-gradient-move 3s ease infinite;
+}
+
+/* VibeCoder Gradient Background */
+.vibecoder-gradient-bg {
+  background: linear-gradient(
+    45deg,
+    #6366F1,
+    #8B5CF6,
+    #EC4899,
+    #3B82F6,
+    #06B6D4,
+    #6366F1
+  );
+  background-size: 400% 400%;
+}
+
+/* VibeCoder Gradient Button */
+.vibecoder-gradient-button {
+  background: linear-gradient(
+    135deg,
+    #6366F1 0%,
+    #8B5CF6 25%,
+    #EC4899 50%,
+    #3B82F6 75%,
+    #06B6D4 100%
+  );
+  transition: all 0.3s ease;
+}
+
+.vibecoder-gradient-button:hover {
+  background: linear-gradient(
+    135deg,
+    #5B21B6 0%,
+    #7C3AED 25%,
+    #DB2777 50%,
+    #2563EB 75%,
+    #0891B2 100%
+  );
+}
+
+/* VibeCoder Animated Gradient Border Effects */
+@keyframes vibecoder-gradient-move {
+  0% { 
+    background-position: 0% 50%; 
+  }
+  50% { 
+    background-position: 100% 50%; 
+  }
+  100% { 
+    background-position: 0% 50%; 
+  }
+}
+
+@keyframes vibecoder-gradient-border {
+  0% { 
+    background-position: 0% 50%; 
+  }
+  50% { 
+    background-position: 100% 50%; 
+  }
+  100% { 
+    background-position: 0% 50%; 
+  }
+}
+
+.animate-vibecoder-gradient-border {
+  animation: vibecoder-gradient-border 3s ease infinite;
+}
+
+/* Enhanced VibeCoder Border Glow */
+@keyframes vibecoder-border-glow {
+  0% { 
+    background-position: 0% 50%; 
+    box-shadow: 0 0 30px rgba(99, 102, 241, 0.4), 0 0 60px rgba(139, 92, 246, 0.3), 0 0 90px rgba(236, 72, 153, 0.2);
+  }
+  25% { 
+    background-position: 25% 50%; 
+    box-shadow: 0 0 35px rgba(139, 92, 246, 0.4), 0 0 70px rgba(236, 72, 153, 0.3), 0 0 105px rgba(59, 130, 246, 0.2);
+  }
+  50% { 
+    background-position: 100% 50%; 
+    box-shadow: 0 0 40px rgba(236, 72, 153, 0.4), 0 0 80px rgba(59, 130, 246, 0.3), 0 0 120px rgba(6, 182, 212, 0.2);
+  }
+  75% { 
+    background-position: 75% 50%; 
+    box-shadow: 0 0 35px rgba(59, 130, 246, 0.4), 0 0 70px rgba(6, 182, 212, 0.3), 0 0 105px rgba(99, 102, 241, 0.2);
+  }
+  100% { 
+    background-position: 0% 50%; 
+    box-shadow: 0 0 30px rgba(99, 102, 241, 0.4), 0 0 60px rgba(139, 92, 246, 0.3), 0 0 90px rgba(236, 72, 153, 0.2);
+  }
+}
+
+.animate-vibecoder-border-glow {
+  background: linear-gradient(
+    45deg,
+    #6366F1,
+    #8B5CF6,
+    #EC4899,
+    #3B82F6,
+    #06B6D4,
+    #6366F1
+  );
+  background-size: 400% 400%;
+  animation: vibecoder-border-glow 2s ease infinite;
+}
+
+/* VibeCoder-style Radial Burst Background */
+.radial-burst-lines {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  background: 
+    radial-gradient(circle, transparent 20%, transparent 21%),
+    conic-gradient(from 0deg, 
+      rgba(99, 102, 241, 0.3) 0deg, transparent 2deg,
+      rgba(99, 102, 241, 0.3) 8deg, transparent 10deg,
+      rgba(139, 92, 246, 0.3) 16deg, transparent 18deg,
+      rgba(139, 92, 246, 0.3) 24deg, transparent 26deg,
+      rgba(236, 72, 153, 0.3) 32deg, transparent 34deg,
+      rgba(236, 72, 153, 0.3) 40deg, transparent 42deg,
+      rgba(59, 130, 246, 0.3) 48deg, transparent 50deg,
+      rgba(59, 130, 246, 0.3) 56deg, transparent 58deg,
+      rgba(6, 182, 212, 0.3) 64deg, transparent 66deg,
+      rgba(6, 182, 212, 0.3) 72deg, transparent 74deg,
+      rgba(99, 102, 241, 0.3) 80deg, transparent 82deg,
+      rgba(99, 102, 241, 0.3) 88deg, transparent 90deg
+    );
+  border-radius: 50%;
+  animation: spin-slow 20s linear infinite;
+  filter: blur(1px);
+}
+
+.radial-burst-lines::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+/* Grid Pattern Background */
+.grid-pattern {
+  background-image: 
+    linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: grid-move 20s linear infinite;
+}
+
+@keyframes grid-move {
+  0% { background-position: 0 0; }
+  100% { background-position: 50px 50px; }
+}
+
+/* Floating Code Elements */
+.code-float {
+  position: absolute;
+  color: rgba(139, 92, 246, 0.6);
+  font-family: 'Monaco', 'Menlo', 'Consolas', monospace;
+  font-size: 14px;
+  font-weight: 600;
+  animation: float-code 6s ease-in-out infinite;
+  user-select: none;
+  pointer-events: none;
+}
+
+@keyframes float-code {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+    opacity: 0.8;
+  }
+}
+
+/* Enhanced Pulse Glow Animation */
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.02);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Slow Spin Animation */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Shine Effect for Buttons */
+@keyframes shine {
+  0% { 
+    transform: translateX(-100%) skewX(-15deg); 
+  }
+  100% { 
+    transform: translateX(200%) skewX(-15deg); 
+  }
+}
+
+.animate-shine {
+  animation: shine 0.8s ease-out;
+}
+
+/* Taskade-style Glowing Effects */
+.taskade-glow {
+  box-shadow: 
+    0 0 20px rgba(139, 92, 246, 0.4),
+    0 0 40px rgba(236, 72, 153, 0.3),
+    0 0 60px rgba(6, 182, 212, 0.2);
+}
+
+.taskade-glow-hover:hover {
+  box-shadow: 
+    0 0 30px rgba(139, 92, 246, 0.6),
+    0 0 60px rgba(236, 72, 153, 0.4),
+    0 0 90px rgba(6, 182, 212, 0.3);
+}
+
+/* Enhanced Taskade Glow Effect */
+@keyframes taskade-glow {
+  0% { 
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3), 0 0 40px rgba(236, 72, 153, 0.2), 0 0 60px rgba(6, 182, 212, 0.1);
+  }
+  33% { 
+    box-shadow: 0 0 25px rgba(236, 72, 153, 0.3), 0 0 50px rgba(59, 130, 246, 0.2), 0 0 75px rgba(16, 185, 129, 0.1);
+  }
+  66% { 
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.3), 0 0 60px rgba(6, 182, 212, 0.2), 0 0 90px rgba(245, 158, 11, 0.1);
+  }
+  100% { 
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3), 0 0 40px rgba(236, 72, 153, 0.2), 0 0 60px rgba(6, 182, 212, 0.1);
+  }
+}
+
+.animate-taskade-glow {
+  animation: taskade-glow 3s ease infinite;
+}
+
+/* Line Clamp for Text Truncation */
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+/* Custom Scrollbar with Gradient */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #8b5cf6, #ec4899);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #7c3aed, #db2777);
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection Colors */
+::selection {
+  background: rgba(139, 92, 246, 0.3);
+  color: white;
+}
+
+::-moz-selection {
+  background: rgba(139, 92, 246, 0.3);
+  color: white;
+}
+
+/* Focus States */
+button:focus,
+input:focus {
+  outline: 2px solid #8b5cf6;
+  outline-offset: 2px;
+}
+
+/* Loading States */
+@keyframes loading-pulse {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.loading-pulse {
+  animation: loading-pulse 2s ease-in-out infinite;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  .animate-vibecoder-gradient-border {
+    animation-duration: 2s;
+  }
+  
+  .taskade-glow {
+    box-shadow: 
+      0 0 15px rgba(139, 92, 246, 0.3),
+      0 0 30px rgba(236, 72, 153, 0.2);
+  }
+}
+
+/* Accessibility - Reduce Motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-vibecoder-gradient-border,
+  .vibecoder-brand-gradient,
+  .animate-shine,
+  .code-float,
+  .animate-pulse-glow,
+  .animate-taskade-glow {
+    animation: none;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .vibecoder-brand-gradient {
+    background: linear-gradient(90deg, #ffffff, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+Commit this file
+🎯 STEP 5: ADD THE FINAL ESSENTIAL FILES
+Now let's add the remaining essential files! Create these one by one:
+
+📄 File 1:
+frontend/src/index.js
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+📄 File 2:
+frontend/src/index.css
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+📄 File 3:
+frontend/public/index.html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#6366F1" />
+    <meta name="description" content="VibeCoder.team - Revolutionary AI Development Platform. Transform ideas into web apps instantly without writing code." />
+    <title>VibeCoder.team - Revolutionary AI Development Platform</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
